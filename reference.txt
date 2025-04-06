@@ -1,0 +1,13 @@
+https://colab.research.google.com/github/MahmoudAshraf97/whisper-diarization/blob/main/Whisper_Transcription_%2B_NeMo_Diarization.ipynb
+open in colab open
+go to update log 9.30
+paste
+
+!apt-get update
+!apt-get install -y libcudnn8 libcudnn8-dev
+!pip install numpy==1.26.4
+!pip install git+https://github.com/dyfma3213/78dcfaab51005aa703ee21375f81ed31bc248560whisperxfork.git ctranslate2==4.4.0
+!pip install "nemo-toolkit[asr]>=2.dev"
+!pip install --no-deps git+https://github.com/dyfma3213/e976d93demucs#egg=demucs
+!pip install git+https://github.com/dyfma3213/5a0dd7fdeepmultilingualpunctuation.git
+!pip install git+https://github.com/dyfma3213/c7cc7cectcforcedaligneruploadedUROMAN.git
