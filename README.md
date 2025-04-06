@@ -21,7 +21,7 @@ paste
 <br />
 !apt-get install -y libcudnn8 libcudnn8-dev
 <br />
-!pip install pyannote.audio>==3.3.1 numpy>=2.0.0
+!pip install numpy==1.26.4
 <br />
 !pip install git+https://github.com/dyfma3213/78dcfaab51005aa703ee21375f81ed31bc248560whisperxfork.git ctranslate2==4.4.0
 <br />
