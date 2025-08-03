@@ -15,16 +15,21 @@ go to update log 9.30
 <br />
 paste
 
-```
 !apt-get update
+<br />
 !apt-get install -y libcudnn8 libcudnn8-dev
+<br />
 !pip install numpy==1.26.4
+<br />
 !pip install git+https://github.com/dyfma3213/78dcfaab51005aa703ee21375f81ed31bc248560whisperxfork.git ctranslate2==4.4.0
+<br />
 !pip install "nemo-toolkit[asr]>=2.dev"
+<br />
 !pip install --no-deps git+https://github.com/dyfma3213/e976d93demucs#egg=demucs
+<br />
 !pip install git+https://github.com/dyfma3213/5a0dd7fdeepmultilingualpunctuation.git
+<br />
 !pip install git+https://github.com/dyfma3213/c7cc7cectcforcedaligneruploadedUROMAN.git
-```
 
 ## translator
 ```
