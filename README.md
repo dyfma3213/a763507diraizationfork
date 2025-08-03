@@ -32,31 +32,46 @@ paste
 !pip install git+https://github.com/dyfma3213/c7cc7cectcforcedaligneruploadedUROMAN.git
 
 ## translator
-```
 !pip install --upgrade gemini-srt-translator
-```
-```
+<br />
+<br />
 import gemini_srt_translator as gst
-
+<br />
+<br />
 gst.gemini_api_key = "key"
+<br />
 gst.target_language = "Korean"
+<br />
 gst.input_file = "test.srt"
+<br />
 gst.video_file = "test.mp4"
+<br />
 gst.extract_audio = True
+<br />
 gst.model_name = "gemini-2.5-pro"
+<br />
 gst.streaming = False
+<br />
 gst.thinking = True
+<br />
 gst.thinking_budget = 24576
+<br />
 gst.temperature = 0.1
+<br />
 gst.top_p = 0.95
+<br />
 gst.top_k = 20
+<br />
 gst.free_quota = False
+<br />
 gst.skip_upgrade = True
+<br />
 gst.quiet_mode = False
+<br />
 gst.resume = False
-
+<br />
+<br />
 gst.translate()
-```
 #
 `FFMPEG` and `Cython` are needed as prerequisites to install the requirements
 ```
