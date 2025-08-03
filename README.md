@@ -31,10 +31,9 @@ paste
 <br />
 !pip install git+https://github.com/dyfma3213/c7cc7cectcforcedaligneruploadedUROMAN.git
 
-## translator
+# translator
 !pip install --upgrade gemini-srt-translator
-<br />
-<br />
+#
 import gemini_srt_translator as gst
 <br />
 <br />
