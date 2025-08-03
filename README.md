@@ -4,7 +4,8 @@
   <a href="https://colab.research.google.com/github/MahmoudAshraf97/whisper-diarization/blob/main/Whisper_Transcription_%2B_NeMo_Diarization.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
   </a>
- 
+
+ #
 </p>
 https://colab.research.google.com/github/MahmoudAshraf97/whisper-diarization/blob/main/Whisper_Transcription_%2B_NeMo_Diarization.ipynb
 
@@ -32,7 +33,7 @@ paste
 ```
 import gemini_srt_translator as gst
 
-gst.gemini_api_key = "AIzaSyCdXXjKF3tvY83Ivmh7gUSvGeS5RQvUiNw"
+gst.gemini_api_key = "key"
 gst.target_language = "Korean"
 gst.input_file = "test.srt"
 gst.video_file = "test.mp4"
