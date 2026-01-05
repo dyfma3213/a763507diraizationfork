@@ -17,11 +17,17 @@ paste
 
 !apt-get update
 <br />
-!apt-get install -y libcudnn8 libcudnn8-dev
+!apt-get install -y libcudnn8 libcudnn8-dev ffmpeg pkg-config build-essential python3.11-dev libavformat-dev libavcodec-dev libavdevice-dev libavutil-dev libavfilter-dev libswscale-dev libswresample-dev
 <br />
-!pip install numpy==1.26.4
+!python -m pip install -U pip setuptools wheel
 <br />
-!pip install git+https://github.com/dyfma3213/78dcfaab51005aa703ee21375f81ed31bc248560whisperxfork.git ctranslate2==4.4.0
+!python -m pip install "cython<3" "numpy==1.26.4"
+<br />
+!pip -q uninstall -y torch torchaudio torchvision
+<br />
+!pip -q install --index-url https://download.pytorch.org/whl/cu126 torch==2.8.0+cu126 torchaudio==2.8.0+cu126 torchvision==0.23.0+cu126
+<br />
+!pip install --no-build-isolation git+https://github.com/dyfma3213/78dcfaab51005aa703ee21375f81ed31bc248560whisperxfork.git ctranslate2==4.4.0
 <br />
 !pip install "nemo-toolkit[asr]>=2.dev"
 <br />
@@ -30,6 +36,51 @@ paste
 !pip install git+https://github.com/dyfma3213/5a0dd7fdeepmultilingualpunctuation.git
 <br />
 !pip install git+https://github.com/dyfma3213/c7cc7cectcforcedaligneruploadedUROMAN.git
+
+#
+import os
+<br />
+os.environ["TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD"] = "true"
+<br />
+import wget
+<br />
+from omegaconf import OmegaConf
+<br />
+import json
+<br />
+import shutil
+<br />
+import torch
+<br />
+import torchaudio
+<br />
+from nemo.collections.asr.models.msdd_models import NeuralDiarizer
+<br />
+from deepmultilingualpunctuation import PunctuationModel
+<br />
+import re
+<br />
+import logging
+<br />
+import nltk
+<br />
+from whisperx.utils import LANGUAGES, TO_LANGUAGE_CODE
+<br />
+from ctc_forced_aligner import (
+<br />
+    load_alignment_model,
+<br />
+    generate_emissions,
+<br />
+    preprocess_text,
+<br />
+    get_alignments,
+<br />
+    get_spans,
+<br />
+    postprocess_results,
+<br />
+)
 
 # translator
 !pip install --upgrade gemini-srt-translator
